@@ -1,0 +1,49 @@
+Hello and welcome to Nick Millers Ranked Play.
+To run the code you will need to open your IDE
+Then you will used "module purge" then "module add compilers/gcc/7.3.0"
+To compile you will use "g++ main.cpp Player.cpp Player.h Player_List.cpp Player_List.h Player_reader.cpp Player_reader.h Player_writer.cpp Player_writer.h PlayerIO.h Points.h Points.cpp Team.cpp Team.h"
+Then to run the code you will use "./a.out"
+
+1st You will find a Ranked_List.txt file this is where the program will save the players usernames and points/xp values.
+	(I have already put players in so you can see how the program works but you should delete these players when you would like to use it for yourself)
+2nd You will have to add players to the player list (when it asks for a command press "a"). To be able to create your first match you will need a minimum of 8 players.
+3rd You can remove a player from the list by using "r" when prompted to enter a command. REMEMBER WHEN YOU REMOVE A PLAYER ALL THE POINTS THAT PLAYER HAS IS LOST!!!
+4th After you have 8 players on the player list you can use the command "m" to create a match.
+5th It will then prompt you to create team 1, you need to select the number value for the first player you would like to add to the team and then press enter.
+	(You will need to do this 4 times for each team)(!!If you enter somthing other then the values prompted this match will not be played!!)
+6th After you have added 4 players to team 1 it will then show you team 1s roster and their total points.
+7th It will then start to ask you what player you would like to add to team 2 (refer to 5th step if confused on how to add players to the team)
+8th After you have selected 4 player for team 2 it will then show you team 2s roster and their total points.
+9th After you have created both teams it will show you the match up of Team 1 and Team 2. This also shows you how many points each team will win or lose based on the results of the match.
+10th It will then prompt you to choose whether the teams are correct. (Select y if yes and n if no) (!!If you select somthing other then those the match will not be played!!)
+11th It will then ask you which team won the match (select either "1" or "2" !!anything else the match wont be completed!!)
+12th After you select which team has won it will then take you back to the beginning to the original command list
+13th You can then choose what ever command you would like to use.
+
+IMPORTANT!!! WHEN YOU ARE DONE WITH THE GAME MAKE SURE TO USE THE COMMAND  "x" TO SAVE THE DATA TO THE FILE!!
+
+Changes the user can make:
+1.The starting xp is 200
+	To change this open the file called main.cpp and scroll to the bottom where you see (line 319)
+	void add_new_player() {
+    		int starting_points = 200; 	<-(200 is the number to change if you would like to change the starting xp)
+    		Player player;
+    		string username;
+    		cout << "Username: ";
+    		cin.ignore();
+    		getline(cin, username);
+    		player.set_points(starting_points);
+    		player.set_username(username);
+    		players += player;
+	}
+2.The base points are 20 -> This is what you change to increase the amount of xp a team can win from a match (if you change this its recomended if you change number 3 and 4 also!)
+	To change this value open the file called points.h and find the value called base_points = 20 and change the value of 20 to whatever you would like!
+3.The max points to win is 50
+	To change this value open the file called points.h and find the value called max_points_win and max_points_lose and change the value of 50 to whatever you would like (KEEP THEM THE SAME AS EACH OTHER)
+4.The min poitns to win is 10
+	 To change this value open the file called points.h and find the value called min_points_win and minx_points_lose and change the value of 10 to whatever you would like (KEEP THEM THE SAME AS EACH OTHER)
+
+
+	
+
+	
