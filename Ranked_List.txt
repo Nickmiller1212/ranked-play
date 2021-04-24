@@ -1,0 +1,8 @@
+miller      	259     
+john        	213     
+grant       	213     
+biggie      	213     
+payt        	187     
+mass        	187     
+cam         	187     
+dev         	141     
